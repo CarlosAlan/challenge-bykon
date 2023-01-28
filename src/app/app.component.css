@@ -1,0 +1,31 @@
+.box-center {
+    position: relative;
+    width: 90%;
+    background:white; 
+    border-radius: 30px;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+.orange-box {
+    width: 50%;
+    left: 25%;
+    background:#ff7f00;
+    border: 2px solid #e33106;
+    box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+    position: relative;
+}
+
+.custom-button {
+    background-color:#e9f3fd;
+    border-radius: 30px;
+    place-content: center;
+    font-weight : bold;
+    color:#1d5585;
+    border: 2px solid #c7cbd3;
+    width:200px;
+    height:45px;
+    box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+}
