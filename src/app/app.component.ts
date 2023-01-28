@@ -128,8 +128,8 @@ export class AppComponent implements AfterViewInit {
     if(str===null || str===""){
       return true
     }
-    var regex = /^[A-Z0-9]*$/;
-    if(!regex.test(str) || str.length > 13){
+    var regex = /^[a-zA-Z0-9]*$/;
+    if(!regex.test(str) || str.length != 13){
       return true;
     }
     return false;
