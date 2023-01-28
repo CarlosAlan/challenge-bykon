@@ -1,26 +1,73 @@
-<div class="container">
-    <div class="box-center">
+<mat-tab-group>
+    <mat-tab label="Front-end">
+        <div class="container">
+            <div class="box-center">
+                <br><br>
+                <div class="orange-box"><br><br><br><br><br><br><br></div>
+                <div style="margin-left: 10%;">Hola Alan</div>
+                <br>
+                <div style="margin-left: 10%;">
+                    <p> <strong>Solicitaste registrarte,</strong>
+                    ingresa a la siguiente liga para continuar con tu proceso y configura tu cuenta nueva.</p> 
+                </div>
+                <br>
+                <div class="col-md-12 text-center">
+                    <button type="button" class="custom-button">Ir a la plataforma</button>
+                </div>
+                <br><br>
+            </div>
+          
+            <div class="fixed-bottom text-center p-3">
+                <p>
+                    La informacion contenida en el presente correo es propiedad de ©Bykon y contituye información confidencial, y
+                    se proporciona solo con fines informativos y con motivo de cotización, por lo que queda expresamente prohibida
+                    la reproduccion total o parcial por cualquier medio, asi como su distribución a personas o empresas que no cuenten
+                    con autorización expresa de ©Bykon
+                </p>
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Back-end">
         <br><br>
-        <div class="orange-box"><br><br><br><br><br><br><br></div>
-        <div style="margin-left: 10%;">Hola Alan</div>
-        <br>
-        <div style="margin-left: 10%;">
-            <p> <strong>Solicitaste registrarte,</strong>
-            ingresa a la siguiente liga para continuar con tu proceso y configura tu cuenta nueva.</p> 
+        <div class="form-group">
+            <label for="file">Choose File</label>
+            <input type="file"
+                   id="file"
+                   (change)="onChange($event)">
+            <br>
+            <br>
+            <div *ngIf="error!=''"  class="alert alert-danger" role="alert">
+                {{error}}
+            </div>
+            <button type="button" class="btn btn-primary" (click)="validateCsv()">Validar Archivo</button>
         </div>
         <br>
-        <div class="col-md-12 text-center">
-            <button type="button" class="custom-button">Ir a la plataforma</button>
-        </div>
-        <br><br>
-    </div>
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Line</th>
+                <th scope="col">Id</th>
+                <th scope="col">Empresa</th>
+                <th scope="col">RFC</th>
+                <th scope="col">Email</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Extranjera</th>
+                <th scope="col">Errores</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let item of companies;">
+                <tr>
+                    <th scope="row">{{item.line}}</th>
+                    <td>{{item.id}}</td>
+                    <td>{{item.empresa}}</td>
+                    <td>{{item.rfc}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.telefono}}</td>
+                    <td> {{item.extranjera}}</td> 
+                    <td> {{item.errores}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-tab>
+  </mat-tab-group>
   
-    <div class="fixed-bottom text-center p-3">
-        <p>
-            La informacion contenida en el presente correo es propiedad de ©Bykon y contituye información confidencial, y
-            se proporciona solo con fines informativos y con motivo de cotización, por lo que queda expresamente prohibida
-            la reproduccion total o parcial por cualquier medio, asi como su distribución a personas o empresas que no cuenten
-            con autorización expresa de ©Bykon
-        </p>
-    </div>
-</div>
