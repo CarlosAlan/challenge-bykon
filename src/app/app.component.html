@@ -64,7 +64,9 @@
                     <td>{{item.email}}</td>
                     <td>{{item.telefono}}</td>
                     <td> {{item.extranjera}}</td> 
-                    <td> {{item.errores}}</td>
+                    <td> 
+                        <p *ngFor="let error of item.errores;">{{error}}</p>
+                    </td>
                 </tr>
             </tbody>
         </table>
